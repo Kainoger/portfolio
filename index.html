@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặng Lê Anh Sơn | Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Sơn <span>Portfolio</span></a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, I'm</h3>
+            <h1>Đặng Lê <span>Anh Sơn</span></h1>
+            <h3>Supply Chain <span>Specialist</span></h3>
+            <p>I specialize in Logistics Optimization and Business Process Automation using Python and Power Platform.</p>
+            
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/sondla/"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Kainoger"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.instagram.com/kainoger/"><i class='bx bxl-instagram' ></i></a>
+            </div>
+
+            <a href="CV_Dang_Le_Anh_Son.pdf" class="btn">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="profile_picture.jpg" alt="Sơn's Profile">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="profile_picture.jpg" alt="Sơn's Profile">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Supply Chain Enthusiast</h3>
+            <p>I am a final-year student specializing in Logistics and Industrial Management. My journey is driven by a passion for digitalizing supply chain operations. With experience from Hitachi Energy and Mondelēz, I combine traditional supply chain knowledge with modern automation tools like Python and Power Platform to solve complex network problems.</p>
+            <a href="https://www.linkedin.com/in/sondla/" class="btn">Read More</a>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+
+        <div class="projects-container">
+            <div class="project-box">
+                <i class='bx bxs-truck'></i>
+                <h3>Logistics Automation Tool</h3>
+                <p>Developed a Python-based system to automate delivery planning and reporting, reducing manual entry errors by 40%.</p>
+                <a href="https://drive.google.com/drive/folders/1rskCzMIYP1TZXBLPsJ0Ij0JBdvs7pZB-?usp=drive_link" target="_blank" class="btn">Read More</a>
+            </div>
+
+            <div class="project-box">
+                <i class='bx bx-line-chart'></i>
+                <h3>SCMission Champion 2025</h3>
+                <p>Led a team to victory in Vietnam's premier supply chain competition, optimizing end-to-end logistics for a global FMCG case.</p>
+                <a href="https://drive.google.com/drive/folders/1_ukrm3iOxBKToSp0QlTIpvTdhW5M6Nk7?usp=drive_link" target="_blank" class="btn">View Case</a>
+            </div>
+
+            <div class="project-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Mondelēz Digitalization</h3>
+                <p>Converted manual Management of Change (MOC) procedures into a paperless Power Platform application.</p>
+                <a href="https://drive.google.com/drive/folders/1TRVpdDfHWxZchiHjyqjrHxH6yihtgdK8?usp=sharing" target="_blank" class="btn">Details</a>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="https://formspree.io/f/mjgpewva" method="POST">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="number" name="phone" placeholder="Mobile Number">
+                <input type="text" name="subject" placeholder="Email Subject">
+            </div>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2026 by Sơn | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+    <script>
+        // Toggle icon navbar
+        let menuIcon = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+
+        // Scroll sections active link
+        let sections = document.querySelectorAll('section');
+        let navLinks = document.querySelectorAll('header nav a');
+
+        window.onscroll = () => {
+            sections.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 150;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+
+                if(top >= offset && top < offset + height) {
+                    navLinks.forEach(links => {
+                        links.classList.remove('active');
+                        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                    });
+                };
+            });
+        };
+    </script>
+</body>
+</html>
