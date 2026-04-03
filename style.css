@@ -444,3 +444,70 @@ section {
         grid-template-columns: 1fr; /* 1 column for mobile */
     }
 }
+
+/* --- CONTACT SECTION REFINEMENTS --- */
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap; /* Good for mobile */
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info-item i {
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+
+.info-item p {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Ensure form is centered and styled */
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Update grid and box behaviors from previous fix */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    gap: 2.5rem;
+}
+
+.project-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 3rem 2rem 4rem;
+}
+
+.project-box p {
+    flex-grow: 1;
+    margin-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
