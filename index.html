@@ -1,235 +1,497 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đặng Lê Anh Sơn | Portfolio</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Dang Le Anh Son — Supply Chain Specialist focused on analytics and process automation with Python and Power Platform.">
+    <meta name="theme-color" content="#07080c">
+    <meta property="og:title" content="Dang Le Anh Son | Supply Chain & Automation">
+    <meta property="og:description" content="Supply chain analytics, process automation and Power Platform digitalization.">
+    <meta property="og:image" content="profile_picture.jpg">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="bg" aria-hidden="true">
+        <div class="bg-grid"></div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <div class="progress" aria-hidden="true"></div>
 
     <header class="header">
-        <a href="#" class="logo">Anh Son's <span>Portfolio</span></a>
-        <nav class="navbar">
+        <a href="#home" class="logo"><span class="logo-mark">AS</span><span class="logo-text">Anh Son</span></a>
+        <nav class="navbar" id="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
+            <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
+        <a href="CV_Dang_Le_Anh_Son.pdf" target="_blank" class="btn btn-sm header-cv">Resume <i class='bx bx-download'></i></a>
+        <button class="menu-btn" id="menu-btn" aria-label="Toggle menu" aria-expanded="false"><i class='bx bx-menu'></i></button>
     </header>
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hi, I'm</h3>
-            <h1>Dang Le <span>Anh Son</span></h1>
-            <h3>Supply Chain <span>Specialist</span></h3>
-            <p>I specialize in Supply Chain Analytics & Process Automation using Python and Power Platform (Power BI, Power Automate, Power Apps).</p>
-            
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/sondla/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/Kainoger" target="_blank"><i class='bx bxl-github' ></i></a>
-                <a href="https://www.facebook.com/sond03/" target="_blank"><i class='bx bxl-facebook' ></i></a>
-            </div>
+    <main>
+        <!-- ============ HERO ============ -->
+        <section class="home" id="home">
+            <div class="home-content">
+                <span class="badge reveal"><span class="dot"></span> Open to supply chain & digital roles</span>
+                <h1 class="reveal">Dang Le <span class="gradient-text">Anh Son</span></h1>
+                <p class="role reveal">Supply Chain <span class="typed" id="typed">Specialist</span><span class="caret">|</span></p>
+                <p class="lead reveal">I turn manual supply chain processes into automated, data-driven workflows using <strong>Python</strong> and <strong>Power Platform</strong>. My experience comes from FMCG and industrial MNCs.</p>
 
-            <a href="CV_Dang_Le_Anh_Son.pdf" target="_blank" class="btn">Download CV</a>
-        </div>
+                <div class="cta reveal">
+                    <a href="#projects" class="btn">View my work <i class='bx bx-right-arrow-alt'></i></a>
+                    <a href="CV_Dang_Le_Anh_Son.pdf" target="_blank" class="btn btn-ghost"><i class='bx bx-download'></i> Download CV</a>
+                </div>
 
-        <div class="home-img">
-            <img src="profile_picture.jpg" alt="Sơn's Profile">
-        </div>
-    </section>
-
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="profile_picture.jpg" alt="Sơn's Profile">
-        </div>
-
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Supply Chain Enthusiast</h3>
-            <p>I am a graduate specializing in Supply Chain Management. My journey is driven by a passion for digitalizing supply chain operations. With experience from FMCG MNCs, I combine traditional supply chain knowledge with modern automation tools like Python and Power Platform to drive operational excellence and team productivity.</p>
-            <a href="https://drive.google.com/file/d/1FP2wnOi5t5CKjR9JZlbMNLrwmRXFBWbd/view?usp=sharing" target="_blank" class="btn">Read More</a>
-        </div>
-    </section>
-
-    <section class="projects" id="skills" style="background: var(--bg-color);">
-        <h2 class="heading">My <span>Skills</span></h2>
-        <div class="projects-container">
-            <div class="project-box">
-                <i class='bx bxl-microsoft'></i>
-                <h3>Power Platform</h3>
-                <p>Power BI, Power Automate, Power Apps</p>
-            </div>
-            <div class="project-box">
-                <i class='bx bxl-python'></i>
-                <h3>Programming</h3>
-                <p>Python (Automation & Analytics), Excel VBA</p>
-            </div>
-            <div class="project-box">
-                <i class='bx bx-data'></i>
-                <h3>ETL & Data</h3>
-                <p>SQL, Power Query, Alteryx</p>
-            </div>
-            <div class="project-box">
-                <i class='bx bx-cog'></i>
-                <h3>End-to-End SC</h3>
-                <p>Knowledge & experiences from Planning to Production & Logistics</p>
-            </div>
-            <div class="project-box">
-                <i class='bx bx-task'></i>
-                <h3>Project Management</h3>
-                <p>Leading digitalization projects and cross-functional team coordination</p>
-            </div>
-            <div class="project-box">
-                <i class='bx bx-world'></i>
-                <h3>English Proficiency</h3>
-                <p>IELTS 8.0 (Academic) - Professional working proficiency</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects" id="projects">
-        <h2 class="heading">My <span>Projects</span></h2>
-
-        <div class="projects-container">
-
-            <div class="project-box">
-                <i class='bx bx-map-alt'></i>
-                <h3>Network Optimization App</h3>
-                <p>Developed an engine to solve the Capacitated VRP. The goal is to design an optimal set of routes for vehicles to deliver goods to a specific set of customers.</p>
-                <a href="https://network-optimization-app-kainoger.streamlit.app/" target="_blank" class="btn">View Details</a>
-            </div>
-
-            <div class="project-box">
-                <i class='bx bxs-truck'></i>
-                <h3>Logistics Automation Tool</h3> 
-                <p>Developed a Python-based system to automate delivery planning and sending automated emails using Google Drive-based data, reducing manual entry errors by 40%.</p>
-                <a href="https://docs.google.com/document/d/1B-vRGqRAIVdamdECPgcheMgPnE9hTc9S/edit?usp=sharing&ouid=113961411355661160767&rtpof=true&sd=true" target="_blank" class="btn">View Details</a>
-            </div>
-
-            <div class="project-box">
-                <i class='bx bx-line-chart'></i>
-                <h3>SCMission 2025 Champion</h3>
-                <p>Led a team to victory in Vietnam's premier supply chain competition, optimizing logistics network for a Australian piping supply company.</p>
-                <a href="https://drive.google.com/drive/folders/1ch4kvkbdFqNWF-t8Uhw4oRt4Is8e9Pq8?usp=sharing" target="_blank" class="btn">View Case</a>
-            </div>
-
-            <div class="project-box">
-                <i class='bx bx-code-alt'></i>
-                <h3>Mondelēz Digitalization</h3>
-                <p>Converted manual Management of Change (MOC) procedures & other processes into paperless Power Platform (BI, Automate, Apps) applications.</p>
-                <a href="https://drive.google.com/file/d/1Iw1qEK76i8WoyyO0QSdv_NRCGxPP7kUV/view?usp=sharing" target="_blank" class="btn">View Details</a>
-            </div>
-
-            <div class="project-box">
-                <i class='bx bx-bot'></i>
-                <h3>Interchain 2024 First Runner-Up</h3>
-                <p>Achieved the first runner-up position out of ~1000 participants, solving supply chain problems for pharmaceutical, fashion and retail companies.</p>
-                <a href="https://drive.google.com/drive/folders/1JV6BY1BVpehOKxciJDkRKNRzyHL2ycAB?usp=sharing" target="_blank" class="btn">View Case</a>
-            
-            </div>
-
-            <div class="project-box">
-                <i class='bx bx-bar-chart-alt-2'></i>
-                <h3>Power BI Sales Dashboard</h3>
-                <p>An interactive AdventureWorks Power BI dashboard utilizing advanced DAX and star-schema modeling to analyze sales, optimizing portfolio visibility via Pareto analysis.</p>
-                <a href="https://drive.google.com/file/d/1jUHwGeNnU9oLTidrtJxODK-R3ihD97jM/view?usp=sharing" target="_blank" class="btn">View Details</a>
-            </div>
-
-            <div class="project-box">
-                <i class='bx bx-spreadsheet'></i>
-                <h3>MPS VBA Automation</h3>
-                <p>An automated VBA production planning tool. It predicts resource needs months in advance while providing a focused one-month schedule to ensure smooth daily execution.</p>
-                <a href="https://drive.google.com/file/d/1uQt0-O0aWmJtzjx8xtmA56FjThSNjNhX/view?usp=drive_link" target="_blank" class="btn">View Details</a>
-            </div>
-
-            <div class="project-box">
-                <i class='bx bxs-data'></i>
-                <h3>Coming soon</h3>
-                <p>A data warehouse project using SQL.</p>
-                <a href="#" target="_blank" class="btn">Soon</a>
-            </div>
-
-            <div class="project-box">
-                <i class='bx bx-package'></i>
-                <h3>Coming soon</h3>
-                <p>An inventory optimization project.</p>
-                <a href="#" target="_blank" class="btn">Soon</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-
-        <div class="contact-info">
-            <div class="info-item">
-                <i class='bx bxs-phone'></i>
-                <div class="info-text">
-                    <span>Mobile</span>
-                    <p>+84 816 534 376</p>
+                <div class="social-icons reveal">
+                    <a href="https://www.linkedin.com/in/sondla/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/Kainoger" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.facebook.com/sond03/" target="_blank" rel="noopener" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                    <a href="mailto:sondla193@gmail.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
                 </div>
             </div>
-            <div class="info-item">
-                <i class='bx bxs-envelope'></i>
-                <div class="info-text">
-                    <span>Email</span>
-                    <p>sondla193@gmail.com</p>
+
+            <div class="home-visual reveal">
+                <div class="avatar-ring">
+                    <img src="profile_picture.jpg" alt="Portrait of Dang Le Anh Son">
+                </div>
+                <div class="float-card fc-1"><i class='bx bx-trophy'></i><div><b>SCMission 2025</b><span>Champion</span></div></div>
+                <div class="float-card fc-2"><i class='bx bxl-microsoft'></i><div><b>20+ apps & dashboards</b><span>Power Platform</span></div></div>
+                <div class="float-card fc-3"><i class='bx bx-world'></i><div><b>IELTS 8.0</b><span>C1 English</span></div></div>
+            </div>
+
+            <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+        </section>
+
+        <!-- ============ LOGOS MARQUEE ============ -->
+        <div class="marquee" aria-label="Companies and tools">
+            <div class="marquee-track">
+                <span>Mondelēz International</span><i>✦</i>
+                <span>Hitachi Energy</span><i>✦</i>
+                <span>Heineken Vietnam</span><i>✦</i>
+                <span>Power BI</span><i>✦</i>
+                <span>Power Automate</span><i>✦</i>
+                <span>Power Apps</span><i>✦</i>
+                <span>Python</span><i>✦</i>
+                <span>SQL</span><i>✦</i>
+                <span>SAP MM & EWM</span><i>✦</i>
+                <span>Excel VBA</span><i>✦</i>
+                <span>Mondelēz International</span><i>✦</i>
+                <span>Hitachi Energy</span><i>✦</i>
+                <span>Heineken Vietnam</span><i>✦</i>
+                <span>Power BI</span><i>✦</i>
+                <span>Power Automate</span><i>✦</i>
+                <span>Power Apps</span><i>✦</i>
+                <span>Python</span><i>✦</i>
+                <span>SQL</span><i>✦</i>
+                <span>SAP MM & EWM</span><i>✦</i>
+                <span>Excel VBA</span><i>✦</i>
+            </div>
+        </div>
+
+        <!-- ============ ABOUT ============ -->
+        <section class="about" id="about">
+            <div class="section-head reveal">
+                <span class="eyebrow">01 — About</span>
+                <h2 class="heading">Supply chain knowledge,<br><span class="gradient-text">automation skills.</span></h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="card about-text reveal">
+                    <p>I studied International Business & Economics at <strong>Foreign Trade University</strong> (GPA 3.64/4.0), and I enjoy digitalizing supply chain operations.</p>
+                    <p>At <strong>Mondelēz</strong>, <strong>Hitachi Energy</strong> and <strong>Heineken</strong>, I combined core supply chain work (MRP, MPS, inventory, procurement) with low-code and Python tools. I built paperless apps, live dashboards and automated flows that teams use every day.</p>
+                    <a href="https://drive.google.com/file/d/1FP2wnOi5t5CKjR9JZlbMNLrwmRXFBWbd/view?usp=sharing" target="_blank" rel="noopener" class="link-arrow">Read more about me <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+
+                <div class="stats">
+                    <div class="card stat reveal"><b data-count="3">0</b><span>MNCs worked with</span></div>
+                    <div class="card stat reveal"><b data-count="20" data-suffix="+">0</b><span>Apps, dashboards & flows shipped</span></div>
+                    <div class="card stat reveal"><b data-count="50" data-suffix="%">0</b><span>Less time in weekly DMS meetings</span></div>
+                    <div class="card stat reveal"><b data-count="4">0</b><span>Case competition awards</span></div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="contact-divider">
-            <span>OR SEND A MESSAGE</span>
-        </div>
+        <!-- ============ EXPERIENCE ============ -->
+        <section class="experience" id="experience">
+            <div class="section-head reveal">
+                <span class="eyebrow">02 — Experience</span>
+                <h2 class="heading">Where I've <span class="gradient-text">worked</span></h2>
+            </div>
 
-        <form action="https://formspree.io/f/mjgpewva" method="POST">
-            <div class="input-box">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
+            <ol class="timeline">
+                <li class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="card tl-card">
+                        <div class="tl-top">
+                            <div>
+                                <h3>BD & Engineering Specialist</h3>
+                                <p class="tl-company">Mondelēz International · North Kinh Do plant</p>
+                            </div>
+                            <span class="tl-date">06/2025 — 02/2026</span>
+                        </div>
+                        <ul>
+                            <li>Led low-code digitalization end to end, from idea to build, roll-out and training. Projects included Change Management, QA Daily Control and the BDE Project Tracker.</li>
+                            <li>Acted as the plant's Digital Champion (CoE) for micro-projects such as Gate Entry, Visitor Registration and Driver Qualification.</li>
+                            <li>Managed PR/PO and BOM triggers for Idea-to-Market projects, with 100% on-time ETA for ingredients and equipment.</li>
+                            <li>Built live DAX dashboards that cut weekly DMS meeting time by 50%.</li>
+                        </ul>
+                        <div class="tags"><span>Power Apps</span><span>Power BI</span><span>Power Automate</span><span>SAP</span><span>PEGA</span></div>
+                    </div>
+                </li>
+                <li class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="card tl-card">
+                        <div class="tl-top">
+                            <div>
+                                <h3>Warehouse Intern</h3>
+                                <p class="tl-company">Hitachi Energy Vietnam · PGHV Bac Ninh</p>
+                            </div>
+                            <span class="tl-date">01/2025 — 04/2025</span>
+                        </div>
+                        <ul>
+                            <li>Drove inventory optimization for the shopfloor team, improving stock accuracy and reducing holding costs.</li>
+                            <li>Built real-time inventory reporting with Power BI and Power Automate, and mapped standard practices in ADONIS.</li>
+                            <li>Took part in stocktaking and daily warehouse operations, entering data in SAP MM and EWM.</li>
+                        </ul>
+                        <div class="tags"><span>Inventory</span><span>Power BI</span><span>SAP MM</span><span>SAP EWM</span></div>
+                    </div>
+                </li>
+                <li class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="card tl-card">
+                        <div class="tl-top">
+                            <div>
+                                <h3>Digital Intern — Supply Chain</h3>
+                                <p class="tl-company">Heineken Vietnam · Hanoi brewery</p>
+                            </div>
+                            <span class="tl-date">04/2024 — 10/2024</span>
+                        </div>
+                        <ul>
+                            <li>Built 4 Power Apps for quality control, chemical labelling, equipment verification and ticketing.</li>
+                            <li>Delivered 6+ Power BI dashboards, including Stock Management and CAR, and 10+ approval and notification flows.</li>
+                        </ul>
+                        <div class="tags"><span>Power Apps</span><span>Power BI</span><span>Power Automate</span></div>
+                    </div>
+                </li>
+                <li class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="card tl-card">
+                        <div class="tl-top">
+                            <div>
+                                <h3>B.Econ, International Business & Economics</h3>
+                                <p class="tl-company">Foreign Trade University</p>
+                            </div>
+                            <span class="tl-date">2021 — 2025</span>
+                        </div>
+                        <ul>
+                            <li>GPA 3.64/4.0. Excellent Student Award 2024.</li>
+                            <li>Top 5 of 60+ supply chain trainees in the FSD Program (VOCO Center).</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ============ SKILLS (BENTO) ============ -->
+        <section class="skills" id="skills">
+            <div class="section-head reveal">
+                <span class="eyebrow">03 — Skills</span>
+                <h2 class="heading">My <span class="gradient-text">toolkit</span></h2>
             </div>
-            <div class="input-box">
-                <input type="tel" name="phone" placeholder="Mobile Number">
-                <input type="text" name="subject" placeholder="Email Subject">
+
+            <div class="bento">
+                <div class="card bento-item b-wide reveal">
+                    <i class='bx bxl-microsoft'></i>
+                    <h3>Power Platform</h3>
+                    <p>End-to-end low-code solutions: paperless apps, approval flows and live dashboards used across plants.</p>
+                    <div class="tags"><span>Power BI</span><span>DAX</span><span>Power Automate</span><span>Power Apps</span></div>
+                </div>
+                <div class="card bento-item reveal">
+                    <i class='bx bxl-python'></i>
+                    <h3>Programming</h3>
+                    <p>Python for automation, optimization and analytics. Excel VBA for planning tools.</p>
+                </div>
+                <div class="card bento-item reveal">
+                    <i class='bx bx-data'></i>
+                    <h3>ETL & Data</h3>
+                    <p>SQL, Power Query, Alteryx and star-schema modelling.</p>
+                </div>
+                <div class="card bento-item b-tall reveal">
+                    <i class='bx bx-network-chart'></i>
+                    <h3>End-to-End Supply Chain</h3>
+                    <p>From planning to production and logistics.</p>
+                    <ul class="checklist">
+                        <li><i class='bx bx-check'></i> MRP & MPS</li>
+                        <li><i class='bx bx-check'></i> Demand forecasting</li>
+                        <li><i class='bx bx-check'></i> Network & route optimization</li>
+                        <li><i class='bx bx-check'></i> Inventory optimization</li>
+                        <li><i class='bx bx-check'></i> SAP MM & EWM</li>
+                        <li><i class='bx bx-check'></i> PR / PO / BOM management</li>
+                    </ul>
+                </div>
+                <div class="card bento-item reveal">
+                    <i class='bx bx-task'></i>
+                    <h3>Project Management</h3>
+                    <p>Leading digitalization and CAPEX projects with 90%+ on-track rate.</p>
+                </div>
+                <div class="card bento-item reveal">
+                    <i class='bx bx-world'></i>
+                    <h3>Languages</h3>
+                    <p>English C1 (IELTS 8.0) · Vietnamese (native)</p>
+                </div>
             </div>
-            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-    </section>
+        </section>
+
+        <!-- ============ PROJECTS ============ -->
+        <section class="projects" id="projects">
+            <div class="section-head reveal">
+                <span class="eyebrow">04 — Projects</span>
+                <h2 class="heading">Selected <span class="gradient-text">work</span></h2>
+            </div>
+
+            <div class="filters reveal" role="tablist">
+                <button class="filter active" data-filter="all">All</button>
+                <button class="filter" data-filter="automation">Automation</button>
+                <button class="filter" data-filter="analytics">Analytics</button>
+                <button class="filter" data-filter="competition">Competitions</button>
+            </div>
+
+            <div class="projects-grid">
+                <article class="card project featured reveal" data-cat="automation analytics">
+                    <div class="project-icon"><i class='bx bx-map-alt'></i></div>
+                    <span class="project-label">Featured · Live app</span>
+                    <h3>Network Optimization App</h3>
+                    <p>An engine that solves the Capacitated Vehicle Routing Problem. It designs an optimal set of routes to deliver goods to a given set of customers, with an interactive Streamlit interface.</p>
+                    <div class="tags"><span>Python</span><span>OR / CVRP</span><span>Streamlit</span></div>
+                    <a href="https://network-optimization-app-kainoger.streamlit.app/" target="_blank" rel="noopener" class="link-arrow">Launch app <i class='bx bx-link-external'></i></a>
+                </article>
+
+                <article class="card project reveal" data-cat="automation">
+                    <div class="project-icon"><i class='bx bxs-truck'></i></div>
+                    <h3>Logistics Automation Tool</h3>
+                    <p>A Python system that plans deliveries and sends automated emails from Google Drive data. It reduced manual entry errors by 40%.</p>
+                    <div class="tags"><span>Python</span><span>Google API</span></div>
+                    <a href="https://docs.google.com/document/d/1B-vRGqRAIVdamdECPgcheMgPnE9hTc9S/edit?usp=sharing&ouid=113961411355661160767&rtpof=true&sd=true" target="_blank" rel="noopener" class="link-arrow">View details <i class='bx bx-right-arrow-alt'></i></a>
+                </article>
+
+                <article class="card project reveal" data-cat="competition">
+                    <div class="project-icon"><i class='bx bx-trophy'></i></div>
+                    <span class="project-label gold">Champion</span>
+                    <h3>SCMission 2025</h3>
+                    <p>Led the winning team at Vietnam's premier supply chain competition by optimizing the logistics network of an Australian piping supplier.</p>
+                    <div class="tags"><span>Network design</span><span>Leadership</span></div>
+                    <a href="https://drive.google.com/drive/folders/1ch4kvkbdFqNWF-t8Uhw4oRt4Is8e9Pq8?usp=sharing" target="_blank" rel="noopener" class="link-arrow">View case <i class='bx bx-right-arrow-alt'></i></a>
+                </article>
+
+                <article class="card project reveal" data-cat="automation">
+                    <div class="project-icon"><i class='bx bx-code-alt'></i></div>
+                    <h3>Mondelēz Digitalization</h3>
+                    <p>Converted manual Management of Change (MOC) procedures and other processes into paperless Power Platform applications.</p>
+                    <div class="tags"><span>Power Apps</span><span>Automate</span><span>BI</span></div>
+                    <a href="https://drive.google.com/file/d/1Iw1qEK76i8WoyyO0QSdv_NRCGxPP7kUV/view?usp=sharing" target="_blank" rel="noopener" class="link-arrow">View details <i class='bx bx-right-arrow-alt'></i></a>
+                </article>
+
+                <article class="card project reveal" data-cat="competition">
+                    <div class="project-icon"><i class='bx bx-medal'></i></div>
+                    <span class="project-label silver">1st Runner-Up</span>
+                    <h3>Interchain 2024</h3>
+                    <p>Placed 1st runner-up of about 1,000 participants and top in the Planning function. Solved supply chain cases for pharma, fashion and retail companies.</p>
+                    <div class="tags"><span>Planning</span><span>Case solving</span></div>
+                    <a href="https://drive.google.com/drive/folders/1JV6BY1BVpehOKxciJDkRKNRzyHL2ycAB?usp=sharing" target="_blank" rel="noopener" class="link-arrow">View case <i class='bx bx-right-arrow-alt'></i></a>
+                </article>
+
+                <article class="card project reveal" data-cat="analytics">
+                    <div class="project-icon"><i class='bx bx-bar-chart-alt-2'></i></div>
+                    <h3>Power BI Sales Dashboard</h3>
+                    <p>An interactive AdventureWorks dashboard with advanced DAX and star-schema modelling. Pareto analysis gives clear visibility of the portfolio.</p>
+                    <div class="tags"><span>Power BI</span><span>DAX</span><span>Data modelling</span></div>
+                    <a href="https://drive.google.com/file/d/1jUHwGeNnU9oLTidrtJxODK-R3ihD97jM/view?usp=sharing" target="_blank" rel="noopener" class="link-arrow">View details <i class='bx bx-right-arrow-alt'></i></a>
+                </article>
+
+                <article class="card project reveal" data-cat="automation analytics">
+                    <div class="project-icon"><i class='bx bx-spreadsheet'></i></div>
+                    <h3>MPS VBA Automation</h3>
+                    <p>An automated production planning tool that forecasts resource needs months ahead and gives a focused one-month schedule for daily execution.</p>
+                    <div class="tags"><span>Excel VBA</span><span>MPS</span></div>
+                    <a href="https://drive.google.com/file/d/1uQt0-O0aWmJtzjx8xtmA56FjThSNjNhX/view?usp=drive_link" target="_blank" rel="noopener" class="link-arrow">View details <i class='bx bx-right-arrow-alt'></i></a>
+                </article>
+
+                <article class="card project soon reveal" data-cat="analytics">
+                    <div class="project-icon"><i class='bx bx-loader-circle'></i></div>
+                    <span class="project-label">In progress</span>
+                    <h3>In the pipeline</h3>
+                    <ul class="pipeline">
+                        <li><i class='bx bxs-data'></i><div><b>SQL Data Warehouse</b><span>A data warehouse project built with SQL.</span></div></li>
+                        <li><i class='bx bx-package'></i><div><b>Inventory Optimization</b><span>An inventory optimization project.</span></div></li>
+                    </ul>
+                    <span class="link-arrow muted">Coming soon</span>
+                </article>
+            </div>
+
+            <div class="awards reveal">
+                <h3><i class='bx bx-award'></i> Honors & awards</h3>
+                <ul>
+                    <li><span>Champion</span> SCMission 2025 · LSC – FTU2 <em>06/2025</em></li>
+                    <li><span>2nd Runner-Up</span> Hanh Trinh Kinh Doanh 2024 · YEC – NEU <em>10/2024</em></li>
+                    <li><span>1st Runner-Up</span> Next Trainee Challenge 2024 · VBI – VinUni <em>10/2024</em></li>
+                    <li><span>1st Runner-Up</span> Interchain 2024 · IBC – FTU <em>05/2024</em></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section class="contact" id="contact">
+            <div class="section-head reveal">
+                <span class="eyebrow">05 — Contact</span>
+                <h2 class="heading">Let's build something <span class="gradient-text">efficient.</span></h2>
+                <p class="sub">Have a role, project or question? My inbox is always open.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <a class="card info-item reveal" href="mailto:sondla193@gmail.com">
+                        <i class='bx bxs-envelope'></i>
+                        <div><span>Email</span><p>sondla193@gmail.com</p></div>
+                    </a>
+                    <a class="card info-item reveal" href="tel:+84816534376">
+                        <i class='bx bxs-phone'></i>
+                        <div><span>Mobile</span><p>+84 816 534 376</p></div>
+                    </a>
+                    <a class="card info-item reveal" href="https://www.linkedin.com/in/sondla/" target="_blank" rel="noopener">
+                        <i class='bx bxl-linkedin'></i>
+                        <div><span>LinkedIn</span><p>linkedin.com/in/sondla</p></div>
+                    </a>
+                </div>
+
+                <form class="card contact-form reveal" action="https://formspree.io/f/mjgpewva" method="POST">
+                    <div class="row">
+                        <label><span>Full name</span><input type="text" name="name" placeholder="Jane Doe" required></label>
+                        <label><span>Email</span><input type="email" name="email" placeholder="jane@company.com" required></label>
+                    </div>
+                    <div class="row">
+                        <label><span>Mobile</span><input type="tel" name="phone" placeholder="Optional"></label>
+                        <label><span>Subject</span><input type="text" name="subject" placeholder="What's it about?"></label>
+                    </div>
+                    <label><span>Message</span><textarea name="message" rows="6" placeholder="Tell me a bit about it…" required></textarea></label>
+                    <button type="submit" class="btn">Send message <i class='bx bx-send'></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2026 by Dang Le Anh Son | All Rights Reserved.</p>
-        </div>
-
-        <div class="footer-iconTop">
-            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-        </div>
+        <p>© <span id="year">2026</span> Dang Le Anh Son. Built with care in Hanoi.</p>
+        <a href="#home" class="to-top" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
     </footer>
 
     <script>
-        let sections = document.querySelectorAll('section');
-        let navLinks = document.querySelectorAll('header nav a');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-        window.onscroll = () => {
+        // Mobile menu
+        const menuBtn = document.getElementById('menu-btn');
+        const navbar = document.getElementById('navbar');
+        menuBtn.addEventListener('click', () => {
+            const open = navbar.classList.toggle('open');
+            menuBtn.setAttribute('aria-expanded', open);
+            menuBtn.innerHTML = open ? "<i class='bx bx-x'></i>" : "<i class='bx bx-menu'></i>";
+        });
+        navbar.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            navbar.classList.remove('open');
+            menuBtn.setAttribute('aria-expanded', false);
+            menuBtn.innerHTML = "<i class='bx bx-menu'></i>";
+        }));
+
+        // Header state, progress bar, active nav link
+        const header = document.querySelector('.header');
+        const progress = document.querySelector('.progress');
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = navbar.querySelectorAll('a');
+        const onScroll = () => {
+            const y = window.scrollY;
+            header.classList.toggle('scrolled', y > 20);
+            const max = document.documentElement.scrollHeight - window.innerHeight;
+            progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
             sections.forEach(sec => {
-                let top = window.scrollY;
-                let offset = sec.offsetTop - 150;
-                let height = sec.offsetHeight;
-                let id = sec.getAttribute('id');
-
-                if(top >= offset && top < offset + height) {
-                    navLinks.forEach(links => {
-                        links.classList.remove('active');
-                        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-                    });
-                };
+                if (y >= sec.offsetTop - 200 && y < sec.offsetTop - 200 + sec.offsetHeight) {
+                    navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + sec.id));
+                }
             });
         };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // Reveal on scroll + count-up stats
+        const countUp = el => {
+            const target = +el.dataset.count, suffix = el.dataset.suffix || '';
+            if (reduceMotion) { el.textContent = target + suffix; return; }
+            const start = performance.now(), dur = 1400;
+            const tick = now => {
+                const p = Math.min((now - start) / dur, 1);
+                el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + suffix;
+                if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+        };
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                e.target.classList.add('visible');
+                e.target.querySelectorAll('[data-count]').forEach(countUp);
+                io.unobserve(e.target);
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach((el, i) => {
+            el.style.transitionDelay = `${(i % 4) * 70}ms`;
+            io.observe(el);
+        });
+
+        // Typing effect
+        const roles = ['Specialist', 'Automation Builder', 'Data Analyst', 'Power Platform Developer'];
+        const typed = document.getElementById('typed');
+        if (!reduceMotion) {
+            let r = 0, c = roles[0].length, deleting = true;
+            const loop = () => {
+                const word = roles[r];
+                typed.textContent = word.slice(0, c);
+                if (deleting) {
+                    if (c-- === 0) { deleting = false; r = (r + 1) % roles.length; c = 0; }
+                } else if (c++ === roles[r].length) {
+                    deleting = true; return setTimeout(loop, 1800);
+                }
+                setTimeout(loop, deleting ? 45 : 85);
+            };
+            setTimeout(loop, 2200);
+        }
+
+        // Card spotlight follows cursor
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('pointermove', e => {
+                const r = card.getBoundingClientRect();
+                card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+                card.style.setProperty('--my', `${e.clientY - r.top}px`);
+            });
+        });
+
+        // Project filters
+        const filters = document.querySelectorAll('.filter');
+        const projects = document.querySelectorAll('.project');
+        filters.forEach(btn => btn.addEventListener('click', () => {
+            filters.forEach(b => b.classList.toggle('active', b === btn));
+            const f = btn.dataset.filter;
+            projects.forEach(p => p.classList.toggle('hidden', f !== 'all' && !p.dataset.cat.includes(f)));
+        }));
     </script>
 </body>
 </html>
