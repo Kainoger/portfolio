@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
     <div class="bg" aria-hidden="true">
@@ -74,6 +74,7 @@
         <!-- ============ LOGOS MARQUEE ============ -->
         <div class="marquee" aria-label="Companies and tools">
             <div class="marquee-track">
+                <span>SPX</span><i>✦</i>
                 <span>Mondelēz International</span><i>✦</i>
                 <span>Hitachi Energy</span><i>✦</i>
                 <span>Heineken Vietnam</span><i>✦</i>
@@ -84,6 +85,7 @@
                 <span>SQL</span><i>✦</i>
                 <span>SAP MM & EWM</span><i>✦</i>
                 <span>Excel VBA</span><i>✦</i>
+                <span>SPX</span><i>✦</i>
                 <span>Mondelēz International</span><i>✦</i>
                 <span>Hitachi Energy</span><i>✦</i>
                 <span>Heineken Vietnam</span><i>✦</i>
@@ -108,14 +110,8 @@
                 <div class="card about-text reveal">
                     <p>I studied International Business & Economics at <strong>Foreign Trade University</strong> (GPA 3.64/4.0), and I enjoy digitalizing supply chain operations.</p>
                     <p>At <strong>Mondelēz</strong>, <strong>Hitachi Energy</strong> and <strong>Heineken</strong>, I combined core supply chain work (MRP, MPS, inventory, procurement) with low-code and Python tools. I built paperless apps, live dashboards and automated flows that teams use every day.</p>
+                    <p>I'm now an <strong>FLP Associate at SPX</strong>, starting my first rotation in First & Last Mile Operations.</p>
                     <a href="https://drive.google.com/file/d/1FP2wnOi5t5CKjR9JZlbMNLrwmRXFBWbd/view?usp=sharing" target="_blank" rel="noopener" class="link-arrow">Read more about me <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-
-                <div class="stats">
-                    <div class="card stat reveal"><b data-count="3">0</b><span>MNCs worked with</span></div>
-                    <div class="card stat reveal"><b data-count="20" data-suffix="+">0</b><span>Apps, dashboards & flows shipped</span></div>
-                    <div class="card stat reveal"><b data-count="50" data-suffix="%">0</b><span>Less time in weekly DMS meetings</span></div>
-                    <div class="card stat reveal"><b data-count="4">0</b><span>Case competition awards</span></div>
                 </div>
             </div>
         </section>
@@ -128,6 +124,21 @@
             </div>
 
             <ol class="timeline">
+                <li class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="card tl-card">
+                        <div class="tl-top">
+                            <div>
+                                <h3>FLP Associate</h3>
+                                <p class="tl-company">SPX</p>
+                            </div>
+                            <span class="tl-date">07/2026 — Present</span>
+                        </div>
+                        <ul>
+                            <li>First rotation: First & Last Mile Operations.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="tl-item reveal">
                     <div class="tl-dot"></div>
                     <div class="card tl-card">
@@ -180,22 +191,6 @@
                             <li>Delivered 6+ Power BI dashboards, including Stock Management and CAR, and 10+ approval and notification flows.</li>
                         </ul>
                         <div class="tags"><span>Power Apps</span><span>Power BI</span><span>Power Automate</span></div>
-                    </div>
-                </li>
-                <li class="tl-item reveal">
-                    <div class="tl-dot"></div>
-                    <div class="card tl-card">
-                        <div class="tl-top">
-                            <div>
-                                <h3>B.Econ, International Business & Economics</h3>
-                                <p class="tl-company">Foreign Trade University</p>
-                            </div>
-                            <span class="tl-date">2021 — 2025</span>
-                        </div>
-                        <ul>
-                            <li>GPA 3.64/4.0. Excellent Student Award 2024.</li>
-                            <li>Top 5 of 60+ supply chain trainees in the FSD Program (VOCO Center).</li>
-                        </ul>
                     </div>
                 </li>
             </ol>
@@ -430,23 +425,11 @@
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
 
-        // Reveal on scroll + count-up stats
-        const countUp = el => {
-            const target = +el.dataset.count, suffix = el.dataset.suffix || '';
-            if (reduceMotion) { el.textContent = target + suffix; return; }
-            const start = performance.now(), dur = 1400;
-            const tick = now => {
-                const p = Math.min((now - start) / dur, 1);
-                el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + suffix;
-                if (p < 1) requestAnimationFrame(tick);
-            };
-            requestAnimationFrame(tick);
-        };
+        // Reveal on scroll
         const io = new IntersectionObserver(entries => {
             entries.forEach(e => {
                 if (!e.isIntersecting) return;
                 e.target.classList.add('visible');
-                e.target.querySelectorAll('[data-count]').forEach(countUp);
                 io.unobserve(e.target);
             });
         }, { threshold: 0.12 });

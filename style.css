@@ -279,18 +279,11 @@ section { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 120px 
 /* =========================================
    7. ABOUT
    ========================================= */
-.about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; }
+.about-grid { max-width: 860px; }
 .about-text { padding: 36px; display: flex; flex-direction: column; gap: 18px; }
 .about-text p { color: var(--muted); font-size: 17px; }
 .about-text strong { color: var(--text); font-weight: 600; }
 
-.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.stat { padding: 28px; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; min-height: 150px; }
-.stat b {
-    font-family: var(--display); font-size: 52px; line-height: 1; letter-spacing: -2px;
-    background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-.stat span { color: var(--muted); font-size: 14px; }
 
 /* =========================================
    8. EXPERIENCE TIMELINE
@@ -481,16 +474,13 @@ section { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 120px 
     .avatar-ring { width: min(280px, 64vw); }
     .scroll-hint { display: none; }
 
-    .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
     section { padding-top: 90px; }
     .home h1 { letter-spacing: -1.5px; }
 
-    .stats { gap: 12px; }
-    .stat { padding: 20px; min-height: 120px; }
-    .stat b { font-size: 40px; }
     .about-text, .tl-card, .contact-form { padding: 24px; }
 
     .timeline { padding-left: 26px; }
